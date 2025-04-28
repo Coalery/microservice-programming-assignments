@@ -1,0 +1,14 @@
+services:
+  calculator:
+    build:
+      context: ./calculator-server
+      dockerfile: ./Dockerfile
+    
+  complex-calculator:
+    build:
+      context: ./complex-calculator
+      dockerfile: ./Dockerfile
+    environment:
+      - CALCULATOR_BASE_URL=http://calculator:3000
+    ports:
+      - "8000:8000"

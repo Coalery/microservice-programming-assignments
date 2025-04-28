@@ -1,2 +1,7 @@
 node_modules
 dist
+
+calculator
+__pycache__
+
+.DS_Store
